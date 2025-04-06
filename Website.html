@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumenForge Studios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            color: #f5f5f5;
+        }
+        header {
+            background-color: #2a2a2a;
+            color: #d4af37; /* Soft Gold */
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .team-section, .philosophy-section, .vision-section, .achievements-section {
+            background-color: #212121;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            color: #d4af37; /* Soft Gold */
+            background-color: #2d2d2d;
+        }
+        td {
+            background-color: #2a2a2a;
+        }
+        footer {
+            background-color: #2a2a2a;
+            color: #d4af37;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        a, button {
+            color: #87ceeb; /* Muted Blue */
+            text-decoration: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1em;
+        }
+        button:hover {
+            text-decoration: underline;
+        }
+        #popup, #tosPopup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #212121;
+            color: #f5f5f5;
+            padding: 40px;
+            border: none;
+            text-align: center;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+    </style>
+    <script>
+        function showPopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+        function closePopup() {
+            const popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+        function showTosPopup() {
+            const popup = document.getElementById("tosPopup");
+            const overlay = document.getElementById("overlay");
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        }
+        function closeTosPopup() {
+            const popup = document.getElementById("tosPopup");
+            const overlay = document.getElementById("overlay");
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to LumenForge Studios</h1>
+        <p>Creating immersive Roblox experiences that ignite imagination!</p>
+    </header>
+    <section class="about-section">
+        <h2 style="color: #87ceeb;">What We Are All About</h2> <!-- Muted Blue for Section Headers -->
+        <p>At LumenForge Studios, we are dedicated to pushing the boundaries of creativity within the Roblox platform. Our mission is to design engaging, innovative, and inclusive experiences that captivate players of all ages. Together, we forge worlds that inspire and ignite the imagination.</p>
+    </section>
+    <section class="vision-section">
+        <h2 style="color: #87ceeb;">Our Vision</h2>
+        <p>We strive to become the leading Roblox studio, known for innovation and excellence in game creation. Our goal is to inspire creativity in every player who steps into our worlds.</p>
+    </section>
+    <section class="achievements-section">
+        <h2 style="color: #87ceeb;">Achievements</h2>
+        <p>Though we are newly founded, LumenForge Studios takes pride in its vibrant community and the creativity of our team. Highlights include:</p>
+        <ul>
+            <li>Launching our first game prototype within weeks of establishment.</li>
+            <li>Growing our community of enthusiasts and collaborators.</li>
+            <li>Designing unique game mechanics that challenge the status quo.</li>
+        </ul>
+    </section>
+    <section>
+        <h2 style="color: #87ceeb;">About Us</h2>
+        <p>At LumenForge Studios, we craft unique and innovative Roblox games that bring people together.</p>
+        <a onclick="showPopup()">New Projects Coming Soon</a>
+    </section>
+    <section class="team-section">
+        <h2 style="color: #87ceeb;">Foundership Team</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Hiring Date</th>
+            </tr>
+            <tr>
+                <td>Waterpython2989</td>
+                <td>CEO | Lead Developer | Main Artist</td>
+                <td>4.5.2025</td>
+            </tr>
+            <tr>
+                <td>Thirdy_727</td>
+                <td>Developer In Training | Future COO</td>
+                <td>4.5.2025</td>
+            </tr>
+        </table>
+    </section>
+    <section class="philosophy-section">
+        <h2 style="color: #87ceeb;">Our Philosophy</h2>
+        <p>We believe in the power of collaboration, creativity, and innovation. Every member of LumenForge Studios contributes to our shared goal of creating unforgettable experiences. Our core values include:</p>
+        <ul>
+            <li><strong>Innovation:</strong> Always exploring new ideas and pushing boundaries.</li>
+            <li><strong>Collaboration:</strong> Building strong relationships with our team and community.</li>
+            <li><strong>Integrity:</strong> Maintaining honesty and transparency in all that we do.</li>
+        </ul>
+    </section>
+    <section>
+        <h2 style="color: #87ceeb;">Fun Fact</h2>
+        <p>Did you know? The name "LumenForge" represents the idea of forging light and creativity into immersive virtual worlds!</p>
+    </section>
+    <section>
+        <h2 style="color: #87ceeb;">Join Us</h2>
+        <p>Want to be part of something creative? We’re always looking for passionate individuals to join our team or collaborate on exciting projects. Get in touch via <a href="https://discord.com/users/984657411795214366" target="_blank">Discord</a> or email us at carterallen773@gmail.com.</p>
+    </section>
+    <footer>
+        <p>Made with ♥ by LumenForge Studios | <a href="https://discord.com/users/984657411795214366" target="_blank">Contact Us</a></p>
+        <button onclick="showTosPopup()">TOS & Guidelines</button>
+    </footer>
+    <div id="popup">
+        <p>No Current Planned Projects</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <div id="tosPopup">
+        <h3 style="color: #d4af37;">Terms of Service</h3>
+        <p>Welcome to the LumenForge Studios website ("Site"). By accessing or using this Site, you agree to comply with the following Terms:</p>
+        <ul>
+            <li>All content on this Site is owned by LumenForge Studios unless stated otherwise.</li>
+            <li>You may not reproduce or distribute content without explicit permission.</li>
+            <li>Use this Site responsibly and refrain from illegal or harmful activities.</li>
+            <li>We are not responsible for third-party links provided on this Site.</li>
+            <li>We reserve the right to update these Terms at any time.</li>
+        </ul>
+        <button onclick="closeTosPopup()">Close</button>
+    </div>
+    <div id="overlay" onclick="closeTosPopup()"></div>
+</body>
+</html>
